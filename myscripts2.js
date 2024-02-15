@@ -27,6 +27,8 @@ function Animal(name) { this.name = name; }
 Animal.prototype.sound = function() { console.log("Generic sound"); };
 let cat = new Animal("Whiskers");
 cat.sound();
+let dog = new Animal("Daisy");
+dog.sound();
 
 
 function greet(name) { return "Hello, " + name + "!"; }
@@ -45,6 +47,7 @@ console.log("Array sum: "+Sum());
 var myText = document.getElementById("myTextArea");
 button2.onclick = function printText(){
 myText.value = "Array sum: "+ Sum();
+myText.value += "\n" + dog.sound();
 }
 
 
